@@ -5,9 +5,9 @@ def melon_payment_checker():
         words = line.split('|')
         #print words
         
-        customer_name = words[0]
-        melon_number = int(words[1])
-        amount_paid = float(words[2])
+        customer_name = words[1]
+        melon_number = int(words[2])
+        amount_paid = float(words[3])
 
         if amount_paid > melon_number * melon_cost:
             print "{} overpaid. Expected {}; received {}.".format(customer_name, (melon_number*melon_cost), amount_paid)
@@ -16,11 +16,9 @@ def melon_payment_checker():
             print "{} underpaid. Expected {}; received {}.".format(customer_name, (melon_number*melon_cost), amount_paid)
 
 melon_cost = 1.00
-payment_roster = open("payment_roster.txt")
+payment_roster = open("customer-orders.txt")
 melon_payment_checker()
 payment_roster.close()
-
-
 
 
 # Joe | 5 | 5.00 
