@@ -1,0 +1,6 @@
+Joe|5|5.00
+Frank|6|6.00
+Sally|3|3.00
+Sean|9|9.50
+David|4|4.00
+Ashley|3|2.00
